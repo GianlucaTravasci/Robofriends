@@ -1,3 +1,5 @@
+Visit this: https://gianlucatravasci.github.io/robofriends/
+
 To run the project: 
 1) Clone this repo
 2) Run npm install
