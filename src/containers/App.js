@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Card from '../components/Card';
+
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
@@ -7,12 +9,16 @@ import './App.css';
 
 class App extends Component {
     render() {
-        return(
-            <div className="tc pa4">
-                <h1><strng>Hello!</strng></h1>
+        return(          
+            <div>
+                <div className="tc">
+                    <h1>Helloo!!</h1>
+                </div>
+                <Card />
             </div>
         )
     }
+    
 }
 
 export default App;
