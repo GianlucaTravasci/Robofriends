@@ -16,8 +16,8 @@ class App extends Component {
                 <div className="tc">
                     <h1>Helloo!!</h1>
                 </div>
-                {robots.map(robot => {
-                    return (<Card id={robot.id} name={robot.name} email={robot.email}/>)
+                {robots.map(({ id, name, email }) => {
+                    return (<Card id={id} name={name} email={email}/>)
                 })}
             </div>
         )
