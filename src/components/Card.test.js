@@ -1,10 +1,8 @@
-import { shallow, mount, render } from 'enzyme';
-import React from 'react'
-
+import React from 'react';
+import { shallow } from 'enzyme';
 import Card from './Card';
 
 
-it('expecto render car component', () => {
-    expect(shallow(<Card/>).length).toEqual(1)
-
-})
+it('renders without crashing', () => {
+  expect(shallow(<Card />)).toMatchSnapshot();
+});
