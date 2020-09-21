@@ -1,8 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount, render } from 'enzyme';
 import Card from './Card';
 
-
 it('renders without crashing', () => {
-  expect(shallow(<Card />)).toMatchSnapshot();
+  const wrapper = shallow(<Card />)
+  console.log(wrapper)
+  expect(wrapper).toMatchSnapshot();
 });
