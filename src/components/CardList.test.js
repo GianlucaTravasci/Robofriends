@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { shallowToJson  } from 'enzyme-to-json';
 
 import CardList from './CardList';
 
@@ -13,6 +12,7 @@ it('renders without crashing', () => {
             email: 'John@gmail.com'
         }
     ]
-  const wrapper = shallow(<CardList robots={mockRobots} />)
-  expect(shallowToJson(wrapper)).toMatchSnapshot();
+    const wrapper = shallow(<CardList robots={mockRobots} />)
+    expect(wrapper.debug()).toMatchSnapshot();
+
 });
