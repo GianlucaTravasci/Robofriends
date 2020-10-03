@@ -1,7 +1,20 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
-workflows:
-  node-tests:
+jobs:
+  bobby:
+    docker: 
+      - image: cimg/node:14.10.1 # the primary container, where your job's commands are run
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello bobby" # run the `echo` command
+  sally:
+    docker: 
+      - image: cimg/node:14.10.1 # the primary container, where your job's commands are run
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello sally" # run the `echo` command
+workflow:
+  version: 2.1
+  bobby_sally:
     jobs:
-      - node/test
+      - bobby
+      - sally
